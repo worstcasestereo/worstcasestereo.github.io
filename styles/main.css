@@ -2194,6 +2194,7 @@ h2.title:after {
 .upcomming-events-list {
   background-position: center bottom;
   background-repeat: repeat-x;
+  padding: 30px 0px;
 }
 
 .upcomming-events-list li {
@@ -3496,7 +3497,7 @@ header {
 header.overflow {
   top: -100px;
   left: 0px;
-  background-color: #0a0a0a !important;
+  background-color: #000 !important;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.11);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.11);
   -webkit-transition: all 0.3s ease-in;
