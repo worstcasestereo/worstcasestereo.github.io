@@ -3734,7 +3734,23 @@ header .navbar-brand img {
   letter-spacing: 10px;
 }
 
+h1.primary-title span {
+  display: none;
+}
+
+h1.primary-title {
+  width:95%;
+  height:95vh;
+  margin: auto;
+  background: transparent url("../images/worstcasestereo-logo-white.png") no-repeat center center;
+/*  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;*/
+  background-size: 80%;
+}
+
 @media (min-width: 992px) {
+
   .primary-title {
     font-size: 100px;
     line-height: 90px;

@@ -1392,6 +1392,9 @@ footer ul.menu-footer li a {
   line-height: 50px;
   letter-spacing: 10px;
 }
+h1.primary-title span {
+  display: none;
+}
 @media (min-width: 992px) {
   .primary-title {
     font-size: 100px;
