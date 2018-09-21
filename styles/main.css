@@ -2057,7 +2057,7 @@ h2.title:after {
 
 .biography .biography-image {
   /*background: #000 url("../images/demo/biography/about.jpg") no-repeat center;*/
-  background: #000 url("https://scontent-cdg2-1.xx.fbcdn.net/v/t31.0-8/16300413_372314939794556_3458512306625026702_o.jpg?_nc_cat=0&oh=6325ef2d935521278b950614e01f420c&oe=5B66A512") no-repeat center;
+  background: #000 url("https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/31131404_177338206163773_5897355710794039296_o.jpg?_nc_cat=100&oh=74a930677e077bde936b6db316d6e411&oe=5C60464F") no-repeat center;
 }
 
 .biography .biography-image {
@@ -3740,9 +3740,10 @@ h1.primary-title span {
 
 h1.primary-title {
   width:95%;
-  height:95vh;
+  height:100vh;
   margin: auto;
-  background: transparent url("../images/worstcasestereo-logo-white.png") no-repeat center center;
+  /*background: transparent url("../images/worstcasestereo-logo-white.png") no-repeat center center;*/
+  background: transparent url("../images/logo/worst-case-stereo-logo.png") no-repeat center center;
 /*  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;*/
@@ -4960,4 +4961,44 @@ img {
 
 .bg-header.contact.header-slider {
   background: url("../images/demo/multi-pages/header-slider/contact/bg.jpg") no-repeat center;
+}
+
+
+
+/*  ADDITION THOMAS */
+
+div.event {
+  font-family: "cousine";
+  padding:15px;
+  border-bottom: 1px solid #666; 
+}
+.event-name {
+  font-weight: bold;
+}
+div.event:nth-of-type(1) {
+  border-top: 1px solid #666; 
+}
+
+div.event div.date-event, div.event div.venue, div.event div.city  {
+  /*padding: 14px;*/
+}
+div.venue {
+  padding-right:20px !important;
+}
+div.city {
+  text-align: right;
+  padding-right:20px !important;  
+}
+#events .event {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.event:hover {
+  background-color: #eee;
+}
+p.buy {
+  text-align: center;
 }
