@@ -1,68 +1,270 @@
-(function ( $ ) {
-	function pad(n) {
-	    return (n < 10) ? ("0" + n) : n;
-	}
+/*!
+ * Countdown v0.1.0
+ * https://github.com/fengyuanchen/countdown
+ *
+ * Copyright 2014 Fengyuan Chen
+ * Released under the MIT license
+ */
 
-	$.fn.showclock = function() {
-	    
-	    var currentDate=new Date();
-	    var fieldDate=$(this).data('date').split('-');
-	    var futureDate=new Date(fieldDate[0],fieldDate[1]-1,fieldDate[2]);
-	    var seconds=futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+(function (factory) {
+    if (typeof define === "function" && define.amd) {
+        // AMD. Register as anonymous module.
+        define(["jquery"], factory);
+    } else {
+        // Browser globals.
+        factory(jQuery);
+    }
+})(function ($) {
 
-	    if(seconds<=0 || isNaN(seconds)){
-	    	this.hide();
-	    	return this;
-	    }
+    "use strict";
 
-	    var days=Math.floor(seconds/86400);
-	    seconds=seconds%86400;
-	    
-	    var hours=Math.floor(seconds/3600);
-	    seconds=seconds%3600;
+    var Countdown = function (element, options) {
+            this.$element = $(element);
+            this.defaults = $.extend({}, Countdown.defaults, this.$element.data(), $.isPlainObject(options) ? options : {});
+            this.init();
+        };
 
-	    var minutes=Math.floor(seconds/60);
-	    seconds=Math.floor(seconds%60);
-	    
-	    var html="";
+    Countdown.prototype = {
+        constructor: Countdown,
 
-	    if(days!=0){
-		    html+="<div class='countdown-container days'>"
-		    	html+="<span class='countdown-value days-bottom'>"+pad(days)+"</span>";
-		    	html+="<span class='countdown-heading days-top'>Days</span>";
-		    html+="</div>";
-		}
+        init: function () {
+            var content = this.$element.html(),
+                date = new Date(this.defaults.date || content);
 
-	    html+="<div class='countdown-container hours'>"
-	    	html+="<span class='countdown-value hours-bottom'>"+pad(hours)+"</span>";
-	    	html+="<span class='countdown-heading hours-top'>Hours</span>";
-	    html+="</div>";
+            if (date.getTime()) {
+                this.content = content;
+                this.date = date;
+                this.find();
 
-	    html+="<div class='countdown-container minutes'>"
-	        html+="<span class='countdown-value minutes-bottom'>"+pad(minutes)+"</span>";
-	    	html+="<span class='countdown-heading minutes-top'>Minutes</span>";
-	    html+="</div>";
+                if (this.defaults.autoStart) {
+                    this.start();
+                }
+            }
+        },
 
-	    html+="<div class='countdown-container seconds'>"
-	        html+="<span class='countdown-value seconds-bottom'>"+pad(seconds)+"</span>";
-	    	html+="<span class='countdown-heading seconds-top'>Seconds</span>";
-	    html+="</div>";
+        find: function () {
+            var $element = this.$element;
 
-	    this.html(html);
-	};
+            this.$days = $element.find("[data-days]");
+            this.$hours = $element.find("[data-hours]");
+            this.$minutes = $element.find("[data-minutes]");
+            this.$seconds = $element.find("[data-seconds]");
 
-	$.fn.countdown = function() {
-		var el=$(this);
-		el.showclock();
-		setInterval(function(){
-			el.showclock();	
-		},1000);
-		
-	}
+            if ((this.$days.length + this.$hours.length + this.$minutes.length + this.$seconds.length) > 0) {
+                this.found = true;
+            }
+        },
 
-}(jQuery));
+        reset: function () {
+            if (this.found) {
+                this.output("days");
+                this.output("hours");
+                this.output("minutes");
+                this.output("seconds");
+            } else {
+                this.output();
+            }
+        },
 
-jQuery(document).ready(function(){
-	if(jQuery(".countdown").length>0)
-		jQuery(".countdown").countdown();
-})
+        ready: function () {
+            var date = this.date,
+                decisecond = 100,
+                second = 1000,
+                minute = 60000,
+                hour = 3600000,
+                day = 86400000,
+                remainder = {},
+                diff;
+
+            if (!date) {
+                return false;
+            }
+
+            diff = date.getTime() - (new Date()).getTime();
+
+            if (diff <= 0) {
+                this.end();
+                return false;
+            }
+
+            remainder.days = diff;
+            remainder.hours = remainder.days % day;
+            remainder.minutes = remainder.hours % hour;
+            remainder.seconds = remainder.minutes % minute;
+            remainder.milliseconds = remainder.seconds % second;
+
+            this.days = Math.floor(remainder.days / day);
+            this.hours = Math.floor(remainder.hours / hour);
+            this.minutes = Math.floor(remainder.minutes / minute);
+            this.seconds = Math.floor(remainder.seconds / second);
+            this.deciseconds = Math.floor(remainder.milliseconds / decisecond);
+
+            return true;
+        },
+
+        start: function () {
+            if (!this.active && this.ready()) {
+                this.active = true;
+                this.reset();
+                this.autoUpdate = this.defaults.fast ?
+                    setInterval($.proxy(this.fastUpdate, this), 100) :
+                    setInterval($.proxy(this.update, this), 1000);
+            }
+        },
+
+        stop: function () {
+            if (this.active) {
+                this.active = false;
+                clearInterval(this.autoUpdate);
+            }
+        },
+
+        end: function () {
+            if (!this.date) {
+                return;
+            }
+
+            this.stop();
+
+            this.days = 0;
+            this.hours = 0;
+            this.minutes = 0;
+            this.seconds = 0;
+            this.deciseconds = 0;
+            this.reset();
+            this.defaults.end();
+        },
+
+        destroy: function () {
+            if (!this.date) {
+                return;
+            }
+
+            this.stop();
+
+            this.$days = null;
+            this.$hours = null;
+            this.$minutes = null;
+            this.$seconds = null;
+
+            this.$element.empty().html(this.content);
+            this.$element.removeData("countdown");
+        },
+
+        fastUpdate: function () {
+            if (--this.deciseconds >= 0) {
+                this.output("deciseconds");
+            } else {
+                this.deciseconds = 9;
+                this.update();
+            }
+        },
+
+        update: function () {
+            if (--this.seconds >= 0) {
+                this.output("seconds");
+            } else {
+                this.seconds = 59;
+
+                if (--this.minutes >= 0) {
+                    this.output("minutes");
+                } else {
+                    this.minutes = 59;
+
+                    if (--this.hours >= 0) {
+                        this.output("hours");
+                    } else {
+                        this.hours = 23;
+
+                        if (--this.days >= 0) {
+                            this.output("days");
+                        } else {
+                            this.end();
+                        }
+                    }
+                }
+            }
+        },
+
+        output: function (type) {
+            if (!this.found) {
+                this.$element.empty().html(this.template());
+                return;
+            }
+
+            switch (type) {
+                case "deciseconds":
+                    this.$seconds.text(this.getSecondsText());
+                    break;
+
+                case "seconds":
+                    this.$seconds.text(this.seconds);
+                    break;
+
+                case "minutes":
+                    this.$minutes.text(this.minutes);
+                    break;
+
+                case "hours":
+                    this.$hours.text(this.hours);
+                    break;
+
+                case "days":
+                    this.$days.text(this.days);
+                    break;
+
+                // No default
+            }
+        },
+
+        template: function () {
+            return this.defaults.text
+                    .replace("%s", this.days)
+                    .replace("%s", this.hours)
+                    .replace("%s", this.minutes)
+                    .replace("%s", this.getSecondsText());
+        },
+
+        getSecondsText: function () {
+            return this.active && this.defaults.fast ? (this.seconds + "." + this.deciseconds) : this.seconds;
+        }
+    };
+
+    // Default settings
+    Countdown.defaults = {
+        autoStart: true,
+        date: null,
+        fast: false,
+        end: $.noop,
+        text: "%s days, %s hours, %s minutes, %s seconds"
+    };
+
+    // Set default settings
+    Countdown.setDefaults = function (options) {
+        $.extend(Countdown.defaults, options);
+    };
+
+    // Register as jQuery plugin
+    $.fn.countdown = function (options) {
+        return this.each(function () {
+            var $this = $(this),
+                data = $this.data("countdown");
+
+            if (!data) {
+                $this.data("countdown", (data = new Countdown(this, options)));
+            }
+
+            if (typeof options === "string" && $.isFunction(data[options])) {
+                data[options]();
+            }
+        });
+    };
+
+    $.fn.countdown.constructor = Countdown;
+    $.fn.countdown.setDefaults = Countdown.setDefaults;
+
+    $(function () {
+        $("[countdown]").countdown();
+    });
+
+});

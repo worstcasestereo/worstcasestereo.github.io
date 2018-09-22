@@ -2057,7 +2057,7 @@ h2.title:after {
 
 .biography .biography-image {
   /*background: #000 url("../images/demo/biography/about.jpg") no-repeat center;*/
-  background: #000 url("https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/31131404_177338206163773_5897355710794039296_o.jpg?_nc_cat=100&oh=74a930677e077bde936b6db316d6e411&oe=5C60464F") no-repeat center;
+  background: #000 url("../images/worst-case-stereo-about-us.jpg") no-repeat center;
 }
 
 .biography .biography-image {
@@ -2076,13 +2076,13 @@ h2.title:after {
 }
 
 .next-show {
-  background: #FFF url("../images/demo/next-show/next-shows.jpg") no-repeat center;
+  /*background: #FFF url("../images/demo/next-show/next-shows.jpg") no-repeat center;*/
   background-size: cover;
 }
 
 .next-show .next-show-title {
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 30px;
+  line-height: 30px;
   font-family: "Montserrat", sans-serif;
   font-weight: 900;
 }
@@ -3350,7 +3350,7 @@ p.date {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 50px;
+  margin: 50px 0px;
 }
 
 .contact .social img {
@@ -3371,14 +3371,13 @@ p.date {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin-top: 50px;
   }
   .contact .social img {
     margin-top: 30px;
@@ -3404,12 +3403,12 @@ p.date {
   }
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .contact .title-follow {
     font-size: 81px;
     line-height: 81px;
   }
-}
+}*/
 
 .contact .name {
   font-family: 'Cousine', monospace;
@@ -3735,27 +3734,41 @@ header .navbar-brand img {
 }
 
 h1.primary-title span {
-  display: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0.75em;
 }
 
 h1.primary-title {
+  font-family: "Richie Youthfield Alt";
+  text-transform: none;
+  text-shadow: 3px 3px #000 !important;
+  font-size: 15em !important;
+  line-height: 0.5em !important;
+  font-weight: normal;
   width:95%;
   height:100vh;
   margin: auto;
+  letter-spacing: 0 !important;
   /*background: transparent url("../images/worstcasestereo-logo-white.png") no-repeat center center;*/
-  background: transparent url("../images/logo/worst-case-stereo-logo.png") no-repeat center center;
+  /*background: transparent url("../images/logo/worst-case-stereo-logo.png") no-repeat center center;*/
 /*  -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;*/
-  background-size: 80%;
+  -o-background-size: cover;
+  background-size: 80%;*/
 }
 
 @media (min-width: 992px) {
 
-  .primary-title {
-    font-size: 100px;
-    line-height: 90px;
-    letter-spacing: 20px;
+  h1.primary-title span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 0.5em;
+  }
+
+  h1.primary-title {
+    line-height: 2em !important;
+    font-size: 20em !important;
   }
 }
 
@@ -4967,38 +4980,74 @@ img {
 
 /*  ADDITION THOMAS */
 
+@font-face {
+    font-family: 'Richie Youthfield Alt';
+    src: url('../fonts/RichieYouthfieldAlt.woff2') format('woff2'),
+        url('../fonts/RichieYouthfieldAlt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 div.event {
   font-family: "cousine";
+  font-size: 18px;
   padding:15px;
   border-bottom: 1px solid #666; 
 }
 .event-name {
+  font-size: 18px;
   font-weight: bold;
 }
 div.event:nth-of-type(1) {
   border-top: 1px solid #666; 
 }
-
-div.event div.date-event, div.event div.venue, div.event div.city  {
-  /*padding: 14px;*/
-}
 div.venue {
+  font-size: 18px;
   padding-right:20px !important;
-}
-div.city {
-  text-align: right;
-  padding-right:20px !important;  
-}
-#events .event {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: center;
-  align-items: center;
-}
-.event:hover {
-  background-color: #eee;
 }
 p.buy {
   text-align: center;
+  padding:20px;
+}
+
+.social a {
+  color:#666;
+  font-size: 3em;
+  width: 3em;
+  text-align: center;
+  font-weight: 900;
+}
+.social a:hover {
+  color:#fff;
+}
+
+.carousel-caption {
+  left: 0%;
+  right:0%;
+  padding-top: 0;
+}
+#about small.info {
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+@media (min-width: 992px) { 
+  #events .event {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .event:hover {
+    background-color: #eee;
+  }
+  div.city {
+    text-align: right;
+    padding-right:20px !important;  
+  }
+  p.buy {
+    text-align: center;
+    padding:0;
+  }
 }
