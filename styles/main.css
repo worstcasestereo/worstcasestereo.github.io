@@ -5032,6 +5032,29 @@ p i {
   margin-right: 5px;
 }
 
+#chevron-scroll-down {
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  margin: auto;
+  width: 100%;
+}
+#chevron-scroll-down i {
+  font-size: 1.5em;
+  color:#fff;
+  animation: fade-chevron 2s infinite alternate;
+}
+@keyframes fade-chevron {
+  /* You could think of as "step 1" */
+  0% {
+    color:rgba(255, 255, 255, 0.25);
+  }
+  /* You could think of as "step 2" */
+  100% {
+    color:rgba(255, 255, 255, 1);
+  }
+}
+
 @media (min-width: 992px) { 
   #events .event {
     display: flex;
