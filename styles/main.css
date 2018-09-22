@@ -3734,25 +3734,25 @@ header .navbar-brand img {
 }
 
 h1.primary-title span {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 0.75em;
+    line-height: 0;
+    font-size: 3.5em !important;
+    margin-top: -48px;
 }
 
 h1.primary-title {
   font-family: "Richie Youthfield Alt";
   text-transform: none;
   text-shadow: 3px 3px #000 !important;
-  font-size: 15em !important;
-  line-height: 0.5em !important;
   font-weight: normal;
   width:95%;
   height:100vh;
   margin: auto;
   letter-spacing: 0 !important;
-  /*background: transparent url("../images/worstcasestereo-logo-white.png") no-repeat center center;*/
-  /*background: transparent url("../images/logo/worst-case-stereo-logo.png") no-repeat center center;*/
-/*  -webkit-background-size: cover;
+  display: flex; /* contexte sur le parent */
+  flex-direction: column; /* direction d'affichage verticale */
+  justify-content: center; /* alignement vertical */
+  /*background: transparent url("../images/logo/worst-case-stereo-logo.png") no-repeat center center;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: 80%;*/
@@ -3763,13 +3763,10 @@ h1.primary-title {
   h1.primary-title span {
     display: inline-block;
     vertical-align: middle;
-    line-height: 0.5em;
+    line-height: 0.5em !important;
+    font-size: 2em !important;
   }
 
-  h1.primary-title {
-    line-height: 2em !important;
-    font-size: 20em !important;
-  }
 }
 
 .coming-title {
