@@ -5028,6 +5028,10 @@ p.buy {
   font-style: italic;
 }
 
+p i {
+  margin-right: 5px;
+}
+
 @media (min-width: 992px) { 
   #events .event {
     display: flex;
