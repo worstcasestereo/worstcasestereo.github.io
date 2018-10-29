@@ -1,0 +1,33 @@
+{
+  "name": "worstcasestereo",
+  "homepage": "https://worstcasestereo.com",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "uglifyjs public/scripts/vendor/jquery.js public/scripts/vendor/countdown.js public/scripts/vendor/bootstrap.js public/scripts/main.js -o public/scripts/worstcasestereo.min.js -c -m --source-map \"root='http://worstcasestereo.com/public/scripts',url='worstcasestereo.min.js.map'\" && uglifycss public/styles/vendor/bootstrap.css public/fontawesome/css/all.css public/styles/main.css public/styles/intro-slider.css public/styles/vendor/animate.min.css > public/styles/worstcasestereo.min.css && npm run build",
+    "deploy": "gh-pages -d build -b master"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1",
+    "uglify-js": "^3.4.9",
+    "uglifycss": "0.0.29"
+  }
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Rock'N'Live 2018 (les 15 ans)",
+    "start_time": "2018-09-28T19:30:00+0200",
+    "venue": {
+      "name": "Espace Gérard Philippe",
+      "address": "96 Rue Louise Michel",
+      "city": "Sartrouville"
+    },
+    "ticket_url": null,
+    "fb_event_url": "https://www.facebook.com/events/1500618146710675/"
+  },
+  {
+    "title": "Emergenza - Step 1",
+    "start_time": "2018-10-20T20:30:00+0200",
+    "venue": {
+      "name": "O'Sullivan Backstage",
+      "address": "92 Boulevard de Clichy",
+      "city": "Paris"
+    },
+    "ticket_url": "http://www.emergenza.net/default.aspx?pag=319&nav=FR&lng=fr-fr&idconcerto=20640",
+    "fb_event_url": "https://www.facebook.com/events/970327899836853/"
+  },
+  {
+    "title": "Emergenza - Quart de finale",
+    "start_time": "2018-11-30T20:00:00+0200",
+    "venue": {
+      "name": "La Boule Noire",
+      "address": "120 Boulevard de Rochechouart",
+      "city": "Paris"
+    },
+    "ticket_url": null,
+    "fb_event_url": null
+  }
+]
