@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "react": "^16.6.0",
+    "react-countdown-now": "^1.3.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5"
   },
@@ -13,7 +14,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "uglifyjs public/scripts/vendor/jquery.js public/scripts/vendor/countdown.js public/scripts/vendor/bootstrap.js public/scripts/main.js -o public/scripts/worstcasestereo.min.js -c -m --source-map \"root='http://worstcasestereo.com/public/scripts',url='worstcasestereo.min.js.map'\" && uglifycss public/styles/vendor/bootstrap.css public/fontawesome/css/all.css public/styles/main.css public/styles/intro-slider.css public/styles/vendor/animate.min.css > public/styles/worstcasestereo.min.css && npm run build",
+    "predeploy": "uglifyjs public/scripts/vendor/jquery.js public/scripts/vendor/bootstrap.js public/scripts/main.js -o public/scripts/worstcasestereo.min.js -c -m --source-map \"root='http://worstcasestereo.com/public/scripts',url='worstcasestereo.min.js.map'\" && uglifycss public/styles/vendor/bootstrap.css public/fontawesome/css/all.css public/styles/main.css public/styles/intro-slider.css public/styles/vendor/animate.min.css > public/styles/worstcasestereo.min.css && npm run build",
     "deploy": "gh-pages -d build -b master"
   },
   "eslintConfig": {
