@@ -12,7 +12,7 @@
   },
   {
     "title": "Emergenza - Step 1",
-    "start_time": "2018-10-20T20:30:00",
+    "start_time": "2018-10-20T20:00:00",
     "venue": {
       "name": "O'Sullivan Backstage",
       "address": "92 Boulevard de Clichy",
@@ -23,7 +23,7 @@
   },
   {
     "title": "Emergenza - Quart de finale",
-    "start_time": "2019-01-26T20:30:00",
+    "start_time": "2019-01-26T20:00:00",
     "venue": {
       "name": "Péniche 'Flow'",
       "address": "4 Port des Invalides",
