@@ -23,6 +23,12 @@ class LatestAlbum extends Component {
               <iframe title="Hello" width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/433091274&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe> 
             </div>
           </div>
+          <div className="voffset40"></div>
+          <div className="row">
+            <div className="col-md-10 col-md-offset-1">
+              <iframe title="Pills" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/534429711&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+            </div>
+          </div>
           <div className="voffset70"></div>
         </div>
       </section>
