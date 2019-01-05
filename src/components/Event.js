@@ -29,7 +29,7 @@ class Event extends Component {
         <div className="col-xs-12 col-md-3">
         {this.props.data.ticket_url &&
           <p className="buy">
-            <a href={this.props.data.ticket_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fa fa-ticket"></i> buy ticket</a>
+            <a href={this.props.data.ticket_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fa fa-ticket-alt"></i> buy ticket</a>
           </p>
         }
         </div>
