@@ -84,7 +84,7 @@ class Events extends Component {
           </div>
           }
           { this.state.loaded && futureEvents.length === 0 &&
-            <div className="text-center">No event if currently scheduled...</div>
+            <div className="text-center">No event is currently scheduled...</div>
           }
           <div className="voffset50"></div>
           <div id="events">
