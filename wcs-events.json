@@ -31,5 +31,16 @@
     },
     "ticket_url": "https://www.emergenza.net/default.aspx?pag=1798&nav=FR&lng=fr-fr&idconcerto=20918",
     "fb_event_url": "https://www.facebook.com/events/317412152199435/"
+  },
+  {
+    "title": "Emergenza - Demie finale",
+    "start_time": "2019-05-11T21:30:00",
+    "venue": {
+      "name": "New Morning",
+      "address": "7/9 Rue des Petites Écuries, 75010",
+      "city": "Paris"
+    },
+    "ticket_url": "",
+    "fb_event_url": ""
   }
 ]
