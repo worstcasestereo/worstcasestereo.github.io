@@ -42,5 +42,16 @@
     },
     "ticket_url": "https://www.emergenza.net/default.aspx?pag=1798&nav=FR&lng=fr-fr&idconcerto=20984",
     "fb_event_url": "https://www.facebook.com/events/617013512060480/"
+  },
+  {
+    "title": "Fête de la musique",
+    "start_time": "2019-06-21T20:45:00",
+    "venue": {
+      "name": "Parce de La Clef Saint-Germain",
+      "address": "46 Rue de Mareil, 78100 ",
+      "city": "Saint-Germain-en-Laye"
+    },
+    "ticket_url": null,
+    "fb_event_url": "https://www.facebook.com/events/347590152617821/"
   }
 ]
