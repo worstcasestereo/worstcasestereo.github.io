@@ -25,8 +25,8 @@ class Biography extends Component {
               </p>
               <p>&nbsp;</p>
               <p>
-                <a href="https://drive.google.com/open?id=12jTm5UpCcwEIvmL6z26e5jl-JmWjd38g" className="btn square" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-file-pdf"></i> Download Tech Rider
+                <a href="https://drive.google.com/drive/folders/1WUy5cikcI-7bwWGLgQFBtIpk1i3EnjAM" className="btn square" target="_blank" rel="noopener noreferrer">
+                  <i className="fa fa-file-pdf"></i> Download Media &amp; Tech Rider
                 </a>
               </p>
           </div>
