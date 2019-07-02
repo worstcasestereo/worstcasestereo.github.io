@@ -67,7 +67,7 @@ class Events extends Component {
         <div className="container">
           <div className="voffset70"></div>
           <div className="title-wrapper">
-            <h2 className="title">UPCOMING EVENTS</h2>
+            <h2 className="title">CONCERTS</h2>
           </div>
           <div className="voffset80"></div>
           { this.state.loaded && futureEvents.length > 0 &&
@@ -84,12 +84,12 @@ class Events extends Component {
           </div>
           }
           { this.state.loaded && futureEvents.length === 0 &&
-            <div className="text-center">No event is currently scheduled...</div>
+            <div className="text-center">Aucun concert n'est pour le moment planifié...</div>
           }
           <div className="voffset50"></div>
           <div id="events">
             { !this.state.loaded &&
-              <p>Loading events...</p>
+              <p>Chargement des concerts...</p>
             }
             { this.state.loaded &&
               futureEvents.map((event, index) => <Event data={(event)} key={index} />)

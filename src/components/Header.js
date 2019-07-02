@@ -18,10 +18,10 @@ class Header extends Component {
           <div className="collapse navbar-collapse navbar-ex1-collapse" id="navbar-muziq">
             <ul className="nav navbar-nav navbar-right">
               <li className="active"><a href="#home">Home</a></li>
-              <li><a href="#latestAlbum">LISTEN</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#upcomingEvents">EVENTS</a></li>
-              <li><a href="#anchor08">GET IN TOUCH</a></li>
+              <li><a href="#latestAlbum">A L&rsquo;ECOUTE</a></li>
+              <li><a href="#about">BIOGRAPHIE</a></li>
+              <li><a href="#upcomingEvents">CONCERTS</a></li>
+              <li><a href="#anchor08">CONTACT</a></li>
               <li className="social-logo"><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/worstcasestereo"><i className="fab fa-facebook"></i></a></li>
               <li className="social-logo"><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/worstcasestereo"><i className="fab fa-instagram"></i></a></li>
               <li className="social-logo"><a target="_blank" rel="noopener noreferrer" href="https://www.twitter.com/worstcasestereo"><i className="fab fa-twitter"></i></a></li>

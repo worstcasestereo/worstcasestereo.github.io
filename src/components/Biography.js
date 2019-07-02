@@ -6,27 +6,26 @@ class Biography extends Component {
       <section className="section container-fluid full-width biography" id="about">
         <div className="row">
           <div className="col-xs-12 col-md-3 col-md-offset-1 biography-description">
-            <h2 className="title inverse">about</h2>
+            <h2 className="title inverse">biographie</h2>
             <div className="voffset40"></div>
-              <p className="cousine">
-                Worst Case Stereo, French rock band from Paris, plays music inspired by 90s grunge (Foo Fighters, Hole, The Smashing Pumpkins) and the return of garage rock in the 2000s (The Vines, Klaxons, Yeah Yeah Yeahs).
-              </p>
+              <blockquote className="cousine">
+              &quot;Worst Case Stereo va droit au but.<br />
+              Les premiers morceaux dévoilés affichent une efficacité à toute épreuve, fusionnant à loisir les mélodies du rock alternatif à une certaine furie qu’on pense héritée de l’emo.<br/>Une désinvolture notamment mise en avant par une voix polymorphe, n’hésitant pas à passer de lignes claires à saturées, allant même jusqu’à titiller le parler-chanter cher au post hardcore d’At The Drive In. Ajoutez-y des riffs largement inspirés par (et non pas copiés sur) le grunge, et vous obtiendrez une formation on ne peut plus prometteuse.<br />
+              A surveiller, dans le meilleur des cas.&quot;<br />
+              </blockquote>
+              <p className="cousine bio-author">- Clément Duboscq (New Noise / FIP)</p>
               <p>&nbsp;</p>
+              <h2>Lineup: <small className="info">(de gauche à droite)</small></h2>
               <p className="cousine">
-                To create their distinctive rock, Mathilde, the vocalist, captivates the audience with a voice that goes from clean to screams.
-              </p>
-              <p>&nbsp;</p>
-              <h2>Lineup: <small className="info">(left to right)</small></h2>
-              <p className="cousine">
-                Mathilde (lead singer)<br />
-                Nico (drums)<br />
-                Thomas (bass)<br />
-                Julien (guitar)<br />
+                Mathilde (chant)<br />
+                Nico (batterie)<br />
+                Thomas (basse)<br />
+                Julien (guitare)<br />
               </p>
               <p>&nbsp;</p>
               <p>
                 <a href="https://drive.google.com/drive/folders/1WUy5cikcI-7bwWGLgQFBtIpk1i3EnjAM" className="btn square" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-file-pdf"></i> Download Media &amp; Tech Rider
+                  <i className="fa fa-file-pdf"></i> Media &amp; fiche technique
                 </a>
               </p>
           </div>

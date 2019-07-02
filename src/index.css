@@ -12,3 +12,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.biography-description blockquote {
+  font-style: italic;
+  font-family: "cousine",monospace;
+  font-size: 15px;
+  line-height: 1.25;
+}
+
+.biography-description .bio-author {
+  font-family: "cousine",monospace;
+  font-size: 12px;
+  line-height: normal;
+  margin-top: 20px;
+}

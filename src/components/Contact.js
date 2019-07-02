@@ -10,7 +10,7 @@ class Contact extends Component {
             <div className="col-md-8 col-md-offset-2">
               <div className="voffset70"></div>
               <div className="title-wrapper">
-                <h2 className="title inverse">GET IN TOUCH</h2>
+                <h2 className="title inverse">CONTACT</h2>
               </div>
               <div className="voffset80"></div>
             </div>
@@ -20,7 +20,7 @@ class Contact extends Component {
           <div className="row no-gutter">
             <div className="col-xs-12 col-md-4 text-center">
               <div className="voffset40"></div>
-              <h2 className="title-follow">LOCATION</h2>
+              <h2 className="title-follow">LOCALISATION</h2>
               <div className="voffset40"></div>
               <p className="name"><i className="fa fa-location-arrow"></i> Paris, France</p>
               <p className="phone"><i className="fa fa-globe-americas"></i> Travel worldwide</p>
@@ -28,7 +28,7 @@ class Contact extends Component {
             </div>
             <div className="col-xs-12 col-md-4 text-center">
               <div className="voffset40"></div>
-              <h2 className="title-follow">PHONE</h2>
+              <h2 className="title-follow">TELEPHONE</h2>
               <div className="voffset40"></div>
               <p className="name">Nicolas</p>
               <p className="phone"><a href="tel:+33683196902"><i className="fa fa-mobile-alt"></i> +33 6 83 19 69 02</a></p>
@@ -42,7 +42,7 @@ class Contact extends Component {
               <h2 className="title-follow">EMAIL</h2>
               <div className="voffset40"></div>
               <p className="email">
-                <a href="https://www.messenger.com/t/worstcasestereo" target="_blank" rel="noopener noreferrer" className="btn square icon"><i className="fab fa-facebook-messenger"></i> Contact us</a>
+                <a href="https://www.messenger.com/t/worstcasestereo" target="_blank" rel="noopener noreferrer" className="btn square icon"><i className="fab fa-facebook-messenger"></i> Contactez-nous</a>
               </p>
               <div className="voffset40"></div>
             </div>
