@@ -4991,6 +4991,13 @@ div.event {
   padding:15px;
   border-bottom: 1px solid #666; 
 }
+div.event.passed {
+  font-family: "cousine";
+  font-size: 18px;
+  padding:15px;
+  border-bottom: 1px solid #999; 
+  color: #999;
+}
 .event-name {
   font-size: 18px;
   font-weight: bold;

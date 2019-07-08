@@ -55,10 +55,19 @@ class Events extends Component {
     });
   }
 
+  getPastEvents(json) {
+    var now = Date.now()
+    return json.filter(function (event) {
+      var date = Date.parse(event.start_time)
+      return (date < now)
+    });
+  }
+
   render() {
 
     if (this.state.loaded) {
       var futureEvents = this.getFutureEvents(this.state.jsonData)
+      var pastEvents = this.getPastEvents(this.state.jsonData)
     };
 
     return (
@@ -96,6 +105,21 @@ class Events extends Component {
             }
           </div>
           <div className="voffset80"></div>
+          <div className="text-center">
+            <a href="https://www.messenger.com/t/worstcasestereo" target="_blank" rel="noopener noreferrer" className="btn square inverse">Voir les concerts passés</a>
+          </div>
+
+          <div id="events" className="hidden">
+            { !this.state.loaded &&
+              <p>Chargement des concerts...</p>
+            }
+            { this.state.loaded &&
+              pastEvents.map((event, index) => <Event data={(event)} key={index} />)
+            }
+          </div>
+
+
+          <div className="voffset50"></div>
         </div>
       </section>
     );
