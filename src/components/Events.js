@@ -6,7 +6,10 @@ class Events extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      loaded: false
+      loaded: false,
+      displayPassed: false,
+      displayPassedText: 'Afficher les concerts précédents',
+      displayPassedClass: 'hidden'
     };
   }
 
@@ -55,10 +58,36 @@ class Events extends Component {
     });
   }
 
+  getPastEvents(json) {
+    var now = Date.now()
+    return json.filter(function (event) {
+      var date = Date.parse(event.start_time)
+      return (date < now)
+    });
+  }
+
+  showHidePassedConcerts(e) {
+    if (!this.state.displayPassed) {
+      this.setState({
+        displayPassed: true,
+        displayPassedText: 'Masquer les concerts précédents',
+        displayPassedClass: '',
+      })      
+    } else {
+      this.setState({
+        displayPassed: false,
+        displayPassedText: 'Afficher les concerts précédents',
+        displayPassedClass: 'hidden',
+      })            
+    }
+    e.preventDefault()
+  }
+
   render() {
 
     if (this.state.loaded) {
       var futureEvents = this.getFutureEvents(this.state.jsonData)
+      var pastEvents = this.getPastEvents(this.state.jsonData)
     };
 
     return (
@@ -96,6 +125,21 @@ class Events extends Component {
             }
           </div>
           <div className="voffset80"></div>
+          <div className="text-center voffset50">
+            <a href="#;" onClick={this.showHidePassedConcerts.bind(this)} rel="noopener noreferrer" className="btn square inverse">{this.state.displayPassedText}</a>
+          </div>
+
+          <div id="events" className={this.state.displayPassedClass}>
+            { !this.state.loaded &&
+              <p>Chargement des concerts...</p>
+            }
+            { this.state.loaded &&
+              pastEvents.map((event, index) => <Event data={(event)} key={index} />)
+            }
+          </div>
+
+
+          <div className="voffset50"></div>
         </div>
       </section>
     );
