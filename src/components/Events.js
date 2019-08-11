@@ -8,7 +8,7 @@ class Events extends Component {
     this.state = {
       loaded: false,
       displayPassed: false,
-      displayPassedText: 'Afficher les concerts précédents',
+      displayPassedText: 'Voir les derniers concerts',
       displayPassedClass: 'hidden'
     };
   }
@@ -70,13 +70,13 @@ class Events extends Component {
     if (!this.state.displayPassed) {
       this.setState({
         displayPassed: true,
-        displayPassedText: 'Masquer les concerts précédents',
+        displayPassedText: 'Masquer les derniers concerts',
         displayPassedClass: '',
       })      
     } else {
       this.setState({
         displayPassed: false,
-        displayPassedText: 'Afficher les concerts précédents',
+        displayPassedText: 'Voir les derniers concerts',
         displayPassedClass: 'hidden',
       })            
     }
