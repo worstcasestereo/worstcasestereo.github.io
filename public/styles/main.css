@@ -2194,7 +2194,7 @@ h2.title:after {
 .upcomming-events-list {
   background-position: center bottom;
   background-repeat: repeat-x;
-  padding: 30px 0px;
+  padding: 30px 15px;
 }
 
 .upcomming-events-list li {
