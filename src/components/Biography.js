@@ -6,7 +6,7 @@ class Biography extends Component {
       <section className="section container-fluid full-width biography" id="about">
         <div className="row">
           <div className="col-xs-12 col-md-3 col-md-offset-1 biography-description">
-            <h2 className="title inverse">biographie</h2>
+            <h2 className="title inverse">présentation</h2>
             <div className="voffset40"></div>
               <blockquote className="cousine">
               &quot;Worst Case Stereo va droit au but.<br />
@@ -23,11 +23,6 @@ class Biography extends Component {
                 Julien (guitare)<br />
               </p>
               <p>&nbsp;</p>
-              <p>
-                <a href="https://drive.google.com/drive/folders/1WUy5cikcI-7bwWGLgQFBtIpk1i3EnjAM" className="btn square" target="_blank" rel="noopener noreferrer">
-                  <i className="fa fa-file-pdf"></i> Media &amp; fiche technique
-                </a>
-              </p>
           </div>
           <div className="col-xs-12 col-md-7 col-sm-offset-1 biography-image">
           </div>
