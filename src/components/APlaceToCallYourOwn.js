@@ -21,7 +21,7 @@ class APlaceToCallYourOwn extends Component {
                   <p className="album album-list">A place to call your own</p>
                   <p className="artist">Worst Case Stereo</p>
                   <div className="voffset20"></div>
-                  <p className="description">Premier EP, sorti le 1er septembre 2019</p>
+                  <p className="description">Premier EP (2019)</p>
                   <div className="voffset20"></div>
                   <ul className="links">
                     <li><a target="_blank" rel="noopener noreferrer" href="https://open.spotify.com/album/0csynpBznhWqiflYoKZupE">spotify</a></li>
@@ -40,7 +40,7 @@ class APlaceToCallYourOwn extends Component {
                 <div className="voffset20"></div>
                 <div className="row">
                   <div className="col-md-10 col-md-offset-1">
-                    <iframe title="The place is dead" width="100%" height="166" scrolling="no" frameBorder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/681846680&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <iframe title="The place is dead" width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/670731107&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                   </div>
                 </div>
                 <div className="voffset20"></div>

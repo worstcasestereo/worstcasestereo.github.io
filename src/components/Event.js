@@ -20,13 +20,20 @@ class Event extends Component {
           <p className="event-description" dangerouslySetInnerHTML={ {__html: this.props.data.venue.name} }></p>
           <p className="event-description" dangerouslySetInnerHTML={ {__html: this.props.data.venue.address} }></p>
         </div>
-        <div className="col-xs-12 col-md-3 city">
+        <div className="col-xs-12 col-md-2 city">
           {this.props.data.venue.city}
         </div>
-        <div className="col-xs-12 col-md-3">
+        <div className="col-xs-12 col-md-2">
         {this.props.data.ticket_url && !this.is_passed &&
           <p className="buy">
             <a href={this.props.data.ticket_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fa fa-ticket-alt"></i> buy ticket</a>
+          </p>
+        }
+        </div>
+        <div className="col-xs-12 col-md-2">
+        {this.props.data.fb_event_url && !this.is_passed &&
+          <p className="buy">
+            <a href={this.props.data.fb_event_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fab fa-facebook-square"></i> RSVP</a>
           </p>
         }
         </div>
