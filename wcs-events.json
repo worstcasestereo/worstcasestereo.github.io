@@ -53,5 +53,38 @@
     },
     "ticket_url": null,
     "fb_event_url": "https://www.facebook.com/events/347590152617821/"
+  },
+  {
+    "title": "All Access #7.5",
+    "start_time": "2020-02-28T20:00:00",
+    "venue": {
+      "name": "La Clef Saint-Germain",
+      "address": "46 Rue de Mareil, 78100",
+      "city": "Saint-Germain-en-Laye"
+    },
+    "ticket_url": null,
+    "fb_event_url": "https://www.facebook.com/events/372080503613388/"
+  },
+  {
+    "title": "Worst Case Stereo + Dogbless",
+    "start_time": "2020-03-26T19:00:00",
+    "venue": {
+      "name": "Le Truskel",
+      "address": "12 Rue Feydeau, 75002",
+      "city": "Paris"
+    },
+    "ticket_url": null,
+    "fb_event_url": null
+  },
+  {
+    "title": "Worst Case Stereo @ L'improvibar",
+    "start_time": "2020-07-04T19:00:00",
+    "venue": {
+      "name": "L'improvibar",
+      "address": "3 Rue Geoffroy l'Angevin, 75004",
+      "city": "Paris"
+    },
+    "ticket_url": null,
+    "fb_event_url": null
   }
 ]
