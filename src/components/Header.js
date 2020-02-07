@@ -18,7 +18,7 @@ class Header extends Component {
           <div className="collapse navbar-collapse navbar-ex1-collapse" id="navbar-muziq">
             <ul className="nav navbar-nav navbar-right">
               <li className="active"><a href="#home">HOME</a></li>
-              <li><a href="#latestVideo">VIDEO</a></li>
+              <li><a href="#latestVideo">VIDEOS</a></li>
               <li><a href="#latestAlbum">A L&rsquo;ECOUTE</a></li>
               <li><a href="#about">PRÉSENTATION</a></li>
               <li><a href="#upcomingEvents">CONCERTS</a></li>
