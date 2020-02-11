@@ -26,3 +26,7 @@ code {
   line-height: normal;
   margin-top: 20px;
 }
+
+p.buy a {
+  padding:16px 45px;
+}

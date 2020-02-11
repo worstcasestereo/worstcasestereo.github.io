@@ -26,14 +26,14 @@ class Event extends Component {
         <div className="col-xs-12 col-md-2">
         {this.props.data.ticket_url && !this.is_passed &&
           <p className="buy">
-            <a href={this.props.data.ticket_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fa fa-ticket-alt"></i> buy ticket</a>
+            <a href={this.props.data.ticket_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fa fa-ticket-alt"></i> ticket</a>
           </p>
         }
         </div>
         <div className="col-xs-12 col-md-2">
         {this.props.data.fb_event_url && !this.is_passed &&
           <p className="buy">
-            <a href={this.props.data.fb_event_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fab fa-facebook-square"></i> RSVP</a>
+            <a href={this.props.data.fb_event_url} target="_blank" rel="noopener noreferrer" className="btn square inverse icon"><i className="fab fa-facebook-square"></i> rsvp</a>
           </p>
         }
         </div>
